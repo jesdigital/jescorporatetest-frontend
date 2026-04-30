@@ -1,0 +1,36 @@
+.featured-projects{
+    position: relative;
+    background-color: #F2F2F2;
+}
+.featured-projects::after {
+    content: "";
+    width: 133px;
+    height: 615px;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: url(../../assets/justice-for-all.svg) no-repeat right;
+}
+.card-body {
+    color: #004F5D;
+}
+.card-body h5{
+    line-height: 30px;
+}
+.project-card-2{
+    background-color: #6CA93D;
+}
+.project-card-4{
+    background-color: #008299;
+}
+.project-card-6{
+    background-color: #E16A2D;
+}
+.project-card-2 .card-body,
+.project-card-4 .card-body,
+.project-card-6 .card-body,
+.project-card-2 .card-body a,
+.project-card-4 .card-body a,
+.project-card-6 .card-body a{
+    color: #ffffff;
+}

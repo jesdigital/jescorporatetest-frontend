@@ -1,0 +1,23 @@
+.splithero-section .row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.splithero-section .row:nth-child(odd) .right-content{
+    padding-right: 16% !important;
+}
+.splithero-section .row:nth-child(even) .right-content {
+    padding-left: 16% !important;
+}
+.splithero-section .right-content h3 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-top: 10px;
+    font-family: "Times New Roman";
+}
+.bottom-shadow {
+    width: 60%;
+    height: 90px;
+    float: right;
+    clip-path: polygon(18% 0, 0 100%, 100% 100%, 100% 0%, 75% 0);
+    background-image: linear-gradient(to right, #6CA93D 40% , #00839B);
+}

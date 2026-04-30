@@ -1,0 +1,13 @@
+h3.main-title {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-top: 10px;
+    font-family: "Times New Roman";
+}
+.need-legal-help .row {
+    border-bottom: 15px solid #6CA93D;
+}
+.nlh img{
+    width: 100%;
+}

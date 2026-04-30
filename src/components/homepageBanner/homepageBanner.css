@@ -1,0 +1,13 @@
+.homepage-banner{
+    padding: 3rem 0 10rem 0;
+}
+.homepage-desc p{
+    font-size: 28px;
+    line-height: 48px;
+    font-weight: 600;
+}
+.announcement p{
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 35px;
+}

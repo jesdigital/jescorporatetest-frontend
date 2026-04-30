@@ -1,0 +1,26 @@
+.footer-3 ul li {
+    margin-bottom: 25px;
+}
+.footer-4 ul li {
+    margin-bottom: 20px;
+}
+.footer-4 ul li a {
+    text-transform: none !important;
+}
+.footer-4 ul li:last-child a {
+    margin-top: 10px;
+    display: inline-block;
+}
+.footer-bottom{
+    background: #004F5D;
+    color: #ffffff;
+}
+.footer-bottom a{
+    color: #ffffff !important;
+    text-decoration: none;
+}
+footer p,
+.footer-bottom a {
+    font-size: 20px;
+    line-height: 35px;
+}

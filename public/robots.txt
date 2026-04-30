@@ -1,0 +1,6 @@
+# Allow all bots to crawl everything
+User-agent: *
+Allow: /
+
+# Link to your sitemap so bots find it immediately
+Sitemap: https://yourdomain.com/sitemap.xml

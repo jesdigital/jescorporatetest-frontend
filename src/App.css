@@ -1,0 +1,24 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    color: #004F5D;
+    font-size: 16px;
+    line-height: 24px ;
+    font-weight: 400 ;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #004F5D;
+    line-height: 100%;
+}
+h2 {
+    font-size: 49px;
+    line-height: 54px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+a{
+    color: #004F5D;
+}
