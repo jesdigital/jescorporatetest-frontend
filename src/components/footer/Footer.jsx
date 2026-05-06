@@ -49,6 +49,11 @@ const Footer = () => {
                     <img
                       src={urlFor(item.icon).width(30).url()}
                       alt={item.platform}
+                      style={{
+                        width: "24px",
+                        height: "24px",
+                        filter: "invert(20%) sepia(60%) saturate(500%) hue-rotate(150deg) brightness(70%) contrast(90%)"
+                      }}
                     />
                   )}
                 </a>

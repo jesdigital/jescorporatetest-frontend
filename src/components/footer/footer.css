@@ -1,3 +1,6 @@
+.footer-2 img{
+filter: "brightness(0) invert(1)";
+}
 .footer-3 ul li {
     margin-bottom: 25px;
 }

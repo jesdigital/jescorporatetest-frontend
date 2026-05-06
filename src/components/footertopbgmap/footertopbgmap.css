@@ -1,0 +1,8 @@
+.footertopbgmap{
+    background: #6CA93D url(../../assets/map-Intersection.svg) no-repeat center;
+    padding: 75px 0;
+}
+.connect-with-us{
+    max-width: 850px;
+    margin: 0 auto;
+}

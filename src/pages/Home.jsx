@@ -4,6 +4,7 @@ import Footer from "../components/footer/Footer"
 import Header from "../components/header/Header"
 import HomepageBanner from "../components/homepageBanner/HomepageBanner"
 import Needlegalhelp from "../components/needlegalhelp/Needlegalhelp"
+import Footertopbgmap from "../components/footertopbgmap/Footertopbgmap"
 import Projects from "../components/projects/Projects"
 import Quadrants from "../components/quadrants/Quadrants"
 import SplitHero from "../components/splithero/SplitHero"
@@ -24,6 +25,7 @@ const Home = () => {
             <SplitHero />
             <Projects />
             <Needlegalhelp />
+            <Footertopbgmap />
             <Footer />
         </div>
     )
