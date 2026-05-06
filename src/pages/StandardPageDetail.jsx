@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom';
 import { client } from '../client'
 import { urlFor } from '../imageBuilder'
 import { PortableText } from '@portabletext/react'
+import ContactForm from '../components/contact/ContactForm';
+import Footertopbgmap from '../components/footertopbgmap/Footertopbgmap'
 
 const StandardPageDetail = () => {
   const { id } = useParams();
@@ -26,7 +28,9 @@ const StandardPageDetail = () => {
     const query = `*[_type == "standardpage" && slug.current == $id][0]{
       title,
       desc,
-      image
+      image,
+      showContactForm,
+      showFooterTopMap
     }`;
 
     client.fetch(query, { id }).then((data) => {
@@ -64,6 +68,12 @@ const StandardPageDetail = () => {
             </div>
           </div>
         </section>
+
+        {/* Contact Form */}
+        {page.showContactForm && <ContactForm />}
+        
+        {/* Footer Top Map */}
+        {page.showFooterTopMap && <Footertopbgmap />}
       </div>
 
       <Footer />
