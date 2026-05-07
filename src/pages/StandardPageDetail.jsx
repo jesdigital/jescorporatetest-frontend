@@ -6,6 +6,7 @@ import { client } from '../client'
 import { urlFor } from '../imageBuilder'
 import { PortableText } from '@portabletext/react'
 import ContactForm from '../components/contact/ContactForm';
+import Footertopbgcolor from '../components/footertopbgcolor/Footertopbgcolor'
 import Footertopbgmap from '../components/footertopbgmap/Footertopbgmap'
 
 const StandardPageDetail = () => {
@@ -30,6 +31,7 @@ const StandardPageDetail = () => {
       desc,
       image,
       showContactForm,
+      showFooterTopCards,
       showFooterTopMap
     }`;
 
@@ -71,6 +73,9 @@ const StandardPageDetail = () => {
 
         {/* Contact Form */}
         {page.showContactForm && <ContactForm />}
+
+        {/* Footer Top Cards */}
+        {page.showFooterTopCards && <Footertopbgcolor />}
         
         {/* Footer Top Map */}
         {page.showFooterTopMap && <Footertopbgmap />}
