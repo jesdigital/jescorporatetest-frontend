@@ -4,12 +4,15 @@ import Footer from '../components/footer/Footer'
 import { client } from '../client'
 import { urlFor } from '../imageBuilder'
 import { PortableText } from '@portabletext/react'
+import { FaGlobe, FaHandshake, FaClock } from 'react-icons/fa'
 
 // GROQ Query
 const query = `*[_type == "projects"]{
   items[]{
     title,
     image,
+    relatedthemes,
+    jessubthemes,
     description1,
     description2,
     countries,
@@ -21,6 +24,24 @@ const query = `*[_type == "projects"]{
     status
   }
 }`
+
+const relatedThemeLabels = {
+  dds: 'Develop Digital Solutions',
+  ilc: 'Increase Legal Capability',
+  sjs: 'Strengthen Justice Systems'
+}
+
+const jesSubthemeLabels = {
+  tjp: 'Training Justice Professionals',
+  bic: 'Build Institutional Capacity',
+  ear: 'Evaluation and Research',
+  ple: 'Public Legal Education',
+  plias: 'Public Legal Information and Services',
+  evamp: 'Empowering Vulnerable and Marginalized People',
+  wd: 'Website Development',
+  pd: 'Platform Development',
+  vp: 'Video Production'
+}
 
 const ProjectDetail = () => {
   const [projects, setProjects] = useState([])
@@ -42,36 +63,66 @@ const ProjectDetail = () => {
 
           {projects.map((item, index) => (
             <div key={index} className="mb-5">
-
+              <p>
+                {item.relatedthemes
+                  ?.map(theme => relatedThemeLabels[theme] || theme)
+                  .join(', ')
+                }
+              </p>
               {/* Title */}
               <h2>{item.title}</h2>
+              <p>
+                <strong>JES Subtheme(s):</strong><br />
+                {item.jessubthemes
+                  ?.map(theme => jesSubthemeLabels[theme] || theme)
+                  .join(', ')
+                }
+              </p>
 
               {/* Description 1 */}
               <div className="my-3">
                 <PortableText value={item.description1} />
               </div>
-              <div className="container-fluid">
+              <div className="container-fluid border-top border-bottom py-3">
                 <div className="container">
                   {/* ✅ Row 1: Country | Funders | Status */}
                   <div className="row mb-4">
 
-                    <div className="col-md-4">
-                      <p><strong>Country:</strong> {item.countries?.join(', ')}</p>
-                    </div>
+                  <div className="col-md-4 d-flex align-items-start gap-3">
 
-                    <div className="col-md-4">
-                      <p><strong>Funders:</strong></p>
-                      {item.funder?.map((f, i) => (
-                        <p key={i}>
-                          <a href={f.url} target="_blank" rel="noreferrer">
-                            {f.name}
-                          </a>
-                        </p>
+                    <FaGlobe size={40} />
+
+                    <p className="mb-0">
+                      <strong>Country</strong><br />
+
+                      {item.countries?.map((country, index) => (
+                        <React.Fragment key={index}>
+                          {country}
+                          <br />
+                        </React.Fragment>
                       ))}
+                    </p>
+
+                  </div>
+
+                    <div className="col-md-4 d-flex align-items-start gap-3 funders">
+                      <FaHandshake size={40} />
+                      <p>
+                        <strong>Funders:</strong><br />
+                        {item.funder?.map((f, i) => (
+                          <React.Fragment key={i}>
+                            <a href={f.url} target="_blank" rel="noreferrer">
+                              {f.name}
+                            </a>
+                            <br />
+                          </React.Fragment>
+                        ))}
+                      </p>
                     </div>
 
-                    <div className="col-md-4">
-                      <p><strong>Status:</strong> {item.status},{item.projectdate}</p>
+                    <div className="col-md-4 d-flex align-items-start gap-3">
+                      <FaClock size={40} />
+                      <p><strong>Status</strong><br></br> {item.status}<br></br>{item.projectdate}</p>
 
                     </div></div></div>
 

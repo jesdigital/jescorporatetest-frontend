@@ -22,3 +22,15 @@ h2 {
 a{
     color: #004F5D;
 }
+.inner-homepage-banner h1{
+    font-size: 48px;
+    line-height: 68px;
+    font-weight: 700;
+}
+.inner-homepage-banner h2{
+    font-size: 35px;
+    line-height: 47px;
+}
+.funders a{
+    text-decoration: none;
+}

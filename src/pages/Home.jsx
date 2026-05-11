@@ -24,7 +24,7 @@ const Home = () => {
             <Quadrants />
             <SplitHero />
             <Projects />
-            <Needlegalhelp />
+            <Needlegalhelp />            
             <Footertopbgmap />
             <Footer />
         </div>

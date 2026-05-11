@@ -5,4 +5,5 @@ export const client = createClient({
   dataset: 'production', // Or your specific dataset name
   useCdn: true,   
   apiVersion: '2026-04-30', // Use today's date
+  useCdn: false,
 });
