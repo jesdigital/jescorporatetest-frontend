@@ -56,3 +56,35 @@ h2.project-title {
     object-fit: contain;
     width: 75%;
 }
+.how-work-icon{
+  width: 90px;
+  height: 90px;
+  min-width: 90px;
+  background: #78b63e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.how-work-icon img{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.footertopbgcolor{
+    position: relative;
+}
+.footertopbgcolor:before{
+    content: "";
+    position: absolute;
+    top: -300px;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: url(/src/assets/left-green-traingle.png) no-repeat top left;
+    z-index: 1;
+    background-size: 100%;
+}
+.footertopbgcolor .footer-top{
+    position: relative;
+}

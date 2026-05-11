@@ -27,7 +27,7 @@ const FunderDonors = () => {
       item.images?.map((img, imgIndex) => (
         <div
           key={`${index}-${imgIndex}`}
-          className="col-lg-3 col-md-4 col-sm-6 col-6 text-center"
+          className="col-lg-3 col-md-4 col-sm-6 col-6 p-4 text-center"
         >
           <img
             src={urlFor(img).width(300).url()}
