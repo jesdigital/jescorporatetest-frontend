@@ -51,3 +51,8 @@ h2.project-title {
     z-index: 1;
     background-size: 100%;
 }
+.funder-logo {
+    max-height: 200px;
+    object-fit: contain;
+    width: 75%;
+}

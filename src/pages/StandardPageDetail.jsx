@@ -6,6 +6,7 @@ import { client } from '../client'
 import { urlFor } from '../imageBuilder'
 import { PortableText } from '@portabletext/react'
 import ContactForm from '../components/contact/ContactForm';
+import FunderDonors from '../components/funders/Funders';
 import Footertopbgcolor from '../components/footertopbgcolor/Footertopbgcolor'
 import Footertopbgmap from '../components/footertopbgmap/Footertopbgmap'
 
@@ -32,6 +33,7 @@ const StandardPageDetail = () => {
       desc,
       image,
       showContactForm,
+      showfunderdonors,
       showFooterTopCards,
       showFooterTopMap
     }`;
@@ -71,15 +73,11 @@ const StandardPageDetail = () => {
             </div>
           </div>
         </section>
-
-        {/* Contact Form */}
-        {page.showContactForm && <ContactForm />}
-
-        {/* Footer Top Cards */}
-        {page.showFooterTopCards && <Footertopbgcolor />}
         
-        {/* Footer Top Map */}
-        {page.showFooterTopMap && <Footertopbgmap />}
+        {page.showContactForm && <ContactForm />} {/* Contact Form */}
+        {page.showfunderdonors && <FunderDonors />} {/* Funder Donors */}       
+        {page.showFooterTopCards && <Footertopbgcolor />}  {/* Footer Top Cards */}      
+        {page.showFooterTopMap && <Footertopbgmap />}  {/* Footer Top Map */}
       </div>
 
       <Footer />
