@@ -5,6 +5,7 @@ import { client } from '../client'
 import { urlFor } from '../imageBuilder'
 import { PortableText } from '@portabletext/react'
 import { FaGlobe, FaHandshake, FaClock } from 'react-icons/fa'
+import Footertopbgcolor from '../components/footertopbgcolor/Footertopbgcolor'
 
 // GROQ Query
 const query = `*[_type == "projects"]{
@@ -19,8 +20,9 @@ const query = `*[_type == "projects"]{
     funder[]{
       name,
       url
-    },
+    },    
     projectdate,
+    showFooterTopCards,
     status
   }
 }`
@@ -47,10 +49,17 @@ const ProjectDetail = () => {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    client.fetch(query).then((data) => {
+    client.fetch(query).then((data) => {   
+     
+
+      // store items
       setProjects(data[0]?.items || [])
     })
   }, [])
+
+  const showFooterTopCards = projects.some(
+  item => item.showFooterTopCards
+)
 
   return (
     <>
@@ -70,7 +79,7 @@ const ProjectDetail = () => {
                 }
               </p>
               {/* Title */}
-              <h2>{item.title}</h2>
+              <h2 className='project-title'>{item.title}</h2>
               <p>
                 <strong>JES Subtheme(s):</strong><br />
                 {item.jessubthemes
@@ -150,8 +159,10 @@ const ProjectDetail = () => {
             </div>
           ))}
 
-        </div> </div>
-
+        </div>         
+        </div>
+     
+  {showFooterTopCards && <Footertopbgcolor />}
       <Footer />
     </>
   )

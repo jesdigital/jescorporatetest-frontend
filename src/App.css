@@ -34,3 +34,20 @@ a{
 .funders a{
     text-decoration: none;
 }
+h2.project-title {
+    max-width: 75%;
+}
+.project-detail-page{
+    position: relative;
+}
+.project-detail-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 700px;
+    height: 505px;
+    background: url(/src/assets/our-project.png) no-repeat top right;
+    z-index: 1;
+    background-size: 100%;
+}
