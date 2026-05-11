@@ -8,7 +8,6 @@ import { PortableText } from '@portabletext/react'
 import ContactForm from '../components/contact/ContactForm';
 import Footertopbgcolor from '../components/footertopbgcolor/Footertopbgcolor'
 import Footertopbgmap from '../components/footertopbgmap/Footertopbgmap'
-import '../app.css'
 
 
 const StandardPageDetail = () => {
