@@ -7,7 +7,7 @@ const FooterTopBgColor = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const query = `*[_type == "footertopbgcolor"]{
+    const query = `*[_type == "footertopbgcolor"] | order(weight asc){
       items[]{
         description
       }
@@ -28,9 +28,9 @@ const FooterTopBgColor = () => {
         <div className="row g-4">
 
           {items.map((item, index) => (
-            <div key={index} className="col-md-4">
+            <div key={index} className="col-md-4 d-flex">
 
-              <div className="bgcolor-card d-flex align-items-start bg-white p-4">
+              <div className="bgcolor-card d-flex align-items-start bg-white p-4 h-100 w-100">
 
                 {/* Text */}
                 <div className="bgcolor-text">
