@@ -19,7 +19,9 @@ const StrategicPlan = () => {
   }, []);
 
   return (
-    <section className="strategic-plan bg-secondary-subtle py-5">
+    <section className="strategic-plan py-5" style={{
+                    backgroundColor: "#F2F2F2",
+                }}>
       <div className="container">
 
         {data.map((item) => (

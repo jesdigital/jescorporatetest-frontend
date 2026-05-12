@@ -11,6 +11,7 @@ import Howwework from '../components/howwework/Howwework'
 import StrategicPlan from '../components/strategicplan/Strategicplan';
 import OurTeam from '../components/ourteam/Ourteam';
 import OurHistory from '../components/ourhistory/Ourhistory';
+import AnnualReports from '../components/annualreports/Annualreports';
 import Footertopbgcolor from '../components/footertopbgcolor/Footertopbgcolor'
 import Footertopbgmap from '../components/footertopbgmap/Footertopbgmap'
 
@@ -42,6 +43,7 @@ const StandardPageDetail = () => {
       strategicplan,
       ourteam,
       ourhistory,
+      annualreports,
       showFooterTopCards,
       showFooterTopMap
     }`;
@@ -88,6 +90,7 @@ const StandardPageDetail = () => {
         {page.strategicplan && <StrategicPlan />} {/* Strategic plan */} 
         {page.ourteam && <OurTeam />} {/* Our Team */}
         {page.ourhistory && <OurHistory />} {/* Our History */}
+        {page.annualreports && <AnnualReports />} {/* Annual Reports */}
         {page.showFooterTopCards && <Footertopbgcolor />}  {/* Footer Top Cards */}      
         {page.showFooterTopMap && <Footertopbgmap />}  {/* Footer Top Map */}
       </div>
