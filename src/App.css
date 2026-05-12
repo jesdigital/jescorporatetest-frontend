@@ -71,10 +71,12 @@ h2.project-title {
   height: 40px;
   object-fit: contain;
 }
-.footertopbgcolor{
+.footertopbgcolor,
+.standard-page.who-we-are .strategic-plan{
     position: relative;
 }
-.footertopbgcolor:before{
+.footertopbgcolor:before,
+.standard-page.who-we-are .strategic-plan:before{
     content: "";
     position: absolute;
     top: -300px;
@@ -88,3 +90,10 @@ h2.project-title {
 .footertopbgcolor .footer-top{
     position: relative;
 }
+.strategic-plan h3 {
+    line-height: 40px;
+    font-weight: bold;
+}
+.standard-page.who-we-are .footertopbgcolor:before{
+    content: inherit;
+} 

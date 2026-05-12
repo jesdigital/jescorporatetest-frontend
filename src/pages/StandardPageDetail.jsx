@@ -8,6 +8,7 @@ import { PortableText } from '@portabletext/react'
 import ContactForm from '../components/contact/ContactForm';
 import FunderDonors from '../components/funders/Funders';
 import Howwework from '../components/howwework/Howwework'
+import StrategicPlan from '../components/strategicplan/Strategicplan';
 import Footertopbgcolor from '../components/footertopbgcolor/Footertopbgcolor'
 import Footertopbgmap from '../components/footertopbgmap/Footertopbgmap'
 
@@ -36,6 +37,7 @@ const StandardPageDetail = () => {
       showContactForm,
       showfunderdonors,
       showhowwework,
+      strategicplan,
       showFooterTopCards,
       showFooterTopMap
     }`;
@@ -56,7 +58,7 @@ const StandardPageDetail = () => {
   return (
     <>      
       <Header />
-      <div>
+      <div className={`standard-page ${id}`}>
         {/* Banner */}
         <section
           className="inner-homepage-banner container-fluid"
@@ -78,7 +80,8 @@ const StandardPageDetail = () => {
         
         {page.showContactForm && <ContactForm />} {/* Contact Form */}
         {page.showfunderdonors && <FunderDonors />} {/* Funder Donors */} 
-        {page.showhowwework && <Howwework />} {/* How We Work */}      
+        {page.showhowwework && <Howwework />} {/* How We Work */} 
+        {page.strategicplan && <StrategicPlan />} {/* Strategic plan */}     
         {page.showFooterTopCards && <Footertopbgcolor />}  {/* Footer Top Cards */}      
         {page.showFooterTopMap && <Footertopbgmap />}  {/* Footer Top Map */}
       </div>
