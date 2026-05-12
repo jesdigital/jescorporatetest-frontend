@@ -9,6 +9,7 @@ import ContactForm from '../components/contact/ContactForm';
 import FunderDonors from '../components/funders/Funders';
 import Howwework from '../components/howwework/Howwework'
 import StrategicPlan from '../components/strategicplan/Strategicplan';
+import OurTeam from '../components/ourteam/Ourteam';
 import Footertopbgcolor from '../components/footertopbgcolor/Footertopbgcolor'
 import Footertopbgmap from '../components/footertopbgmap/Footertopbgmap'
 
@@ -38,6 +39,7 @@ const StandardPageDetail = () => {
       showfunderdonors,
       showhowwework,
       strategicplan,
+      ourteam,
       showFooterTopCards,
       showFooterTopMap
     }`;
@@ -81,7 +83,8 @@ const StandardPageDetail = () => {
         {page.showContactForm && <ContactForm />} {/* Contact Form */}
         {page.showfunderdonors && <FunderDonors />} {/* Funder Donors */} 
         {page.showhowwework && <Howwework />} {/* How We Work */} 
-        {page.strategicplan && <StrategicPlan />} {/* Strategic plan */}     
+        {page.strategicplan && <StrategicPlan />} {/* Strategic plan */} 
+        {page.ourteam && <OurTeam />} {/* Our Team */}
         {page.showFooterTopCards && <Footertopbgcolor />}  {/* Footer Top Cards */}      
         {page.showFooterTopMap && <Footertopbgmap />}  {/* Footer Top Map */}
       </div>

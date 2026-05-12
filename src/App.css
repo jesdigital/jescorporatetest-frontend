@@ -22,6 +22,19 @@ h2 {
 a{
     color: #004F5D;
 }
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.inner-homepage-banner{
+    background: url(../images/banner.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+}
 .inner-homepage-banner h1{
     font-size: 48px;
     line-height: 68px;
@@ -91,9 +104,16 @@ h2.project-title {
     position: relative;
 }
 .strategic-plan h3 {
-    line-height: 40px;
+    line-height: 32px;
     font-weight: bold;
 }
 .standard-page.who-we-are .footertopbgcolor:before{
     content: inherit;
 } 
+.out-team .card-body h3,
+.out-team .card-body a{
+    color: #ffffff !important;
+}
+.ourteam-desc h3 {
+    line-height: 50px;
+}

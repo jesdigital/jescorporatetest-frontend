@@ -66,7 +66,7 @@ const SplitHero = () => {
             )}
 
             {item?.description && (
-              <div className="mb-4 text-muted">
+              <div className="mb-4">
                 <PortableText value={item.description} />
               </div>
             )}

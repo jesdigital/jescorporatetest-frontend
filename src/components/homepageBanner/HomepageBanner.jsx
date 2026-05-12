@@ -37,7 +37,7 @@ const HomepageBanner = () => {
       <div className="container">
         <div className="row align-items-center">
 
-          <div className="col-lg-5 col-md-8">
+          <div className="col-lg-6 col-md-8">
 
             <div className="mb-3 announcement">
               <PortableText value={data.text} />
