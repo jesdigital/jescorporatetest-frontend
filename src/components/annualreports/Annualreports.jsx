@@ -36,7 +36,7 @@ const AnnualReports = () => {
       }}
     >
       <div
-        className="container"
+        className="container" id="annual-reports"
         style={{
           maxWidth: "1170px",
         }}
